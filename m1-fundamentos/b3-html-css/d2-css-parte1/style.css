@@ -1,0 +1,16 @@
+h1 {
+    size: 65px;
+    color: orange;
+}
+
+ul {
+    background: palegreen;
+}
+
+.bg-blue {
+    background: blue;
+}
+
+/* De acordo com a propriedade Cascade,
+o background de ul será azul, uma vez que
+irá se sobrepor ao palegreen */
