@@ -24,7 +24,7 @@ Olá, viajante! Neste repositório você encontrará todos os exercícios realiz
 - [x] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [x] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [x] 3-4: _HTML Semântico_
-- [x] 3-5: _[Projeto - HTML & CSS]()_
+- [x] 3-5: _[Projeto - HTML & CSS](https://github.com/tryber/sd-015-b-project-lessons-learned/tree/matheus-pessoa-lessons-learned)_
 
 ##### Bloco 4: Introdução - JavaScript
 
