@@ -1,9 +1,13 @@
-let nota = 43;
+let candidata1 = "reprovada";
 
-if (nota >= 80) {
-    console.log("Parabéns, você foi aprovada(o)!")
-} else if (nota >= 60 && nota < 80) {
-    console.log("Você está na nossa lista de espera")
-} else {
-    console.log("Você foi reprovado(a)")
+switch (candidata1) {
+  case "aprovada":
+    console.log("Parabéns você foi aprovado(a)!");
+    break;
+  case "lista":
+    console.log("Você está na lista de espera");
+    break;
+  case "reprovada":
+    console.log("Você foi reprovado(a)");
+    break;
 }
