@@ -1,1 +1,0 @@
-let userPiece = window.prompt("Nome da peça: ");
