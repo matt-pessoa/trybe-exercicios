@@ -29,6 +29,15 @@ let infoDois = {
   recorrente: "Sim",
 };
 
-for (chaveInfo in info) {
-  console.log(info[chaveInfo] + " e " + sinfoDois[chaveInfo]);
+for (properties in info) {
+  // Se a propriedade for reccorrente e a resposta Sim para os dois, retornará "Ambos recorrentes", caso contrário, apenas concatenar os valores das propriedades
+  if (
+    properties === "recorrente" &&
+    info[properties] === "Sim" &&
+    infoDois[properties] === "Sim"
+  ) {
+    console.log("Ambos recorrentes");
+  } else {
+    console.log(info[properties] + " e " + infoDois[properties]);
+  }
 }
