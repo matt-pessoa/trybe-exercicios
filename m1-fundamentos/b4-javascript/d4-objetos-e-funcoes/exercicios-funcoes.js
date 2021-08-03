@@ -147,3 +147,68 @@ console.log(mostRepeated(arrayTeste));
 //   }
 //   counter = 0;
 // }
+
+/** 
+ * ? 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+Valor de teste: N = 5 .
+Valor esperado no retorno da função: 1+2+3+4+5 = 15 .
+ */
+
+function gaussSum(num) {
+  let arrayNumbers = [];
+  let soma = 0;
+  for (let numero = 0; numero <= num; numero += 1) {
+    arrayNumbers.push(numero);
+  }
+  for (index in arrayNumbers) {
+    soma += arrayNumbers[index];
+  }
+  return soma;
+}
+
+console.log(gaussSum(5));
+
+/**
+ * ? 7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+Valor de teste: 'trybe' e 'be'
+Valor esperado no retorno da função: true
+verificaFimPalavra('trybe', 'be') ;
+Retorno esperado: true
+verificaFimPalavra('joaofernando', 'fernan') ;
+Retorno esperado: false
+ */
+
+function isEnding(word, ending) {
+  let wordSplit = word.split("");
+  let endingSplit = ending.split("");
+
+  let slicer = -1 * endingSplit.length;
+  let wordEnding = wordSplit.slice(slicer).join("");
+
+  if (wordEnding === ending) {
+    return console.log(true);
+  } else {
+    return console.log(false);
+  }
+}
+
+isEnding("trybe", "be");
+isEnding("joaofernando", "fernan");
+
+/**
+ * * Conceito
+ */
+// let word = "trybe"; // exemplo com as palavras trybe e be
+// let ending = "be";
+
+// let wordSplit = word.split(""); // divide "trybe" em letras --> ['t','r','y','b','e']
+// let endingSplit = ending.split(""); // divide "be" em letras --> ['b','e']
+
+// let slicer = -1 * endingSplit.length; // vou cortar o array wordSplit do tamanho do array endingSplit, multiplico por -1 para cortar do final para o início, já que queremos comparar o final
+// let wordEnding = wordSplit.slice(slicer).join(""); // corto o array wordSplit e uno o resultado em uma única string
+
+// if (wordEnding === ending) { // comparação entre a string recém feita e o ending inicial
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
