@@ -1,7 +1,5 @@
 # Exercícios
 
-<hr>
-
 ## Parte I - Criação de arquivos e diretórios
 
 <p><strong>Dica:</strong> Para criação de arquivos vazios você pode utilizar o comando <code>touch nome-do-arquivo.extensao</code>.</p>
