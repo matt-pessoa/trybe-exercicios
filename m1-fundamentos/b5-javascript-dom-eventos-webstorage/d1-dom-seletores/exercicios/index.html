@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      main,
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Exercício 5.1 - JavaEscripito</h1>
+    </header>
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+      function meInTwoYears() {
+        let meInTwoYearsText = document.getElementsByTagName("p")[1];
+        meInTwoYearsText.innerText =
+          "Me vejo trabalhando como front-end, me preparando para uma vaga internacional, fluente em francês e feliz.";
+      }
+      meInTwoYears();
+
+      function yellowToGreen() {
+        let outsideSquare = document.getElementsByClassName("main-content")[0];
+        outsideSquare.style.background = "rgb(76, 164, 109)";
+      }
+      yellowToGreen();
+
+      function redToWhite() {
+        let innerSquare = document.getElementsByClassName("center-content")[0];
+        innerSquare.style.background = "white";
+      }
+      redToWhite();
+
+      function lowerToUpper() {
+        let paragraphs = document.getElementsByTagName("p");
+        for (let index = 0; index < paragraphs.length; index += 1) {
+          paragraphs[index].textContent =
+            paragraphs[index].textContent.toUpperCase();
+        }
+        /* ! Outra forma de fazer o loop for
+        for(let p of paragraphs) {
+          p.textContent = p.textContent.toUpperCase();
+        }
+        */
+      }
+      lowerToUpper();
+
+      function pOnConsole() {
+        let paragraphs = document.getElementsByTagName("p");
+        for (let p of paragraphs) {
+          console.log(p.textContent);
+        }
+      }
+      pOnConsole();
+    </script>
+  </body>
+</html>
