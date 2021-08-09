@@ -3,9 +3,11 @@
   <body>
     <header>
       <h2 id="page-title">Título</h2>
-      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <p id="paragraph" class="paragrafinhos">
+        Dê uma cor para este parágrafo!
+      </p>
       <h4 id="subtitle">Subtítulo</h4>
-      <p id="second-paragraph">Segundo parágrafo!</p>
+      <p id="second-paragraph" class="paragrafinhos">Segundo parágrafo!</p>
     </header>
     <script>
       const paragraph = document.getElementById("paragraph");
@@ -20,6 +22,17 @@
 
       let pageSubtitle = document.getElementById("subtitle");
       pageSubtitle.textContent = "'I love you' quer dizer 'morena' em francês";
+
+      let paragraphs = document.getElementsByClassName("paragrafinhos");
+      paragraphs[0].style.background = "blue";
+      paragraphs[0].style.padding = "20px";
+
+      let subtitleStyle = document.getElementsByTagName("h4");
+      subtitleStyle[0].style.color = "green";
+      subtitleStyle[0].style.background = "yellow";
+
+      let bodyStyle = document.getElementsByTagName("body");
+      bodyStyle[0].style.background = "grey";
     </script>
   </body>
 </html>
