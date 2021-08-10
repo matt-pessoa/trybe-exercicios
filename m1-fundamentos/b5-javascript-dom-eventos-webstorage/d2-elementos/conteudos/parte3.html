@@ -20,6 +20,25 @@
       </section>
     </main>
 
-    <script></script>
+    <script>
+      let paiDoPai = document.getElementById("paiDoPai");
+      let pai = paiDoPai.firstElementChild;
+      let primeiroFilho = document.getElementById("primeiroFilho");
+      let ondeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+      let segundoEUltimoFilhoDoFilho = document.getElementById(
+        "segundoEUltimoFilhoDoFilho"
+      );
+      let terceiroFilho = document.getElementById("terceiroFilho");
+      let quartoEUltimoFilho = document.getElementById("quartoEUltimoFilho");
+
+      paiDoPai.firstElementChild.removeChild(primeiroFilho);
+      paiDoPai.firstElementChild.removeChild(terceiroFilho);
+      paiDoPai.firstElementChild.removeChild(quartoEUltimoFilho);
+      ondeVoceEsta.removeChild(segundoEUltimoFilhoDoFilho);
+
+      console.log(paiDoPai.children);
+      console.log(pai.children);
+      console.log(ondeVoceEsta.children);
+    </script>
   </body>
 </html>
