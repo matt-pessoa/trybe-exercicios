@@ -161,6 +161,19 @@
 
       /* Exercício 4 */
       sectionRight.style.margin = "auto";
+
+      /* Exercício 5 */
+      paiDaSection = document.querySelector(".center-content").parentElement; // main é pai da section
+      paiDaSection.style.background = "green";
+
+      /* Exercício 6 */
+      let listItems = document.querySelector("ul").children;
+      let unumberedList = document.querySelector("ul");
+
+      unumberedList.removeChild(listItems[9]);
+      unumberedList.removeChild(listItems[8]);
+
+      console.log(listItems);
     </script>
   </body>
 </html>
