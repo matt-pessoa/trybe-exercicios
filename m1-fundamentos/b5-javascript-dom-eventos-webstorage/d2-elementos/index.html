@@ -57,28 +57,47 @@
   </head>
   <body>
     <script>
-      function exerciseOne() {
-        let body = document.querySelector("body");
-        let h1 = document.createElement("h1");
-        body.appendChild(h1);
+      // Exercício 1
+      let body = document.querySelector("body");
+      let h1 = document.createElement("h1");
+      body.appendChild(h1);
 
-        console.log(body.children);
-      }
-      exerciseOne();
+      console.log(body.children);
 
-      function exerciseTwo() {
-        let body = document.querySelector("body");
-        let main = document.createElement("main");
-        main.className = "main-content";
-        body.appendChild(main);
+      // Exercício 2
+      let main = document.createElement("main");
+      main.className = "main-content";
+      body.appendChild(main);
 
-        console.log(body.querySelector(".main-content"));
-      }
-      exerciseTwo();
+      console.log(body.querySelector(".main-content"));
 
-      function exerciseThree() {
-        exerciseTwo();
-      }
+      // Exercício 3
+      let section = document.createElement("section");
+      section.className = "center-content";
+      main.appendChild(section);
+
+      console.log(document.querySelector(".center-content"));
+
+      // Exercício 4
+      let p = document.createElement("p");
+      section.appendChild(p);
+      p.textContent = "Olá, eu sou um parágafo. E-eu.. eu...  eu estou vivo?";
+
+      // Exercício 5
+      let sectionLeft = document.createElement("section");
+      sectionLeft.className = "left-content";
+      main.appendChild(sectionLeft);
+
+      console.log(document.querySelector(".left-content"));
+      console.log(document.querySelector(".left-content").parentElement);
+
+      // Exercício 6
+      let sectionRight = document.createElement("section");
+      sectionRight.className = "right-content";
+      main.appendChild(sectionRight);
+
+      console.log(document.querySelector(".right-content"));
+      console.log(document.querySelector(".right-content").parentElement);
     </script>
   </body>
 </html>
