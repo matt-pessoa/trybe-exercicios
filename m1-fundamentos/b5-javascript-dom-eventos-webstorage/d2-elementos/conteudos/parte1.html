@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="paiDoPai">
+      <section id="pai">
+        <section id="primeiroFilho"></section>
+        <section id="elementoOndeVoceEsta">
+          <section id="primeiroFilhoDoFilho"></section>
+          <section id="segundoEUltimoFilhoDoFilho"></section>
+        </section>
+        Atenção!
+        <section id="terceiroFilho"></section>
+        <section id="quartoEUltimoFilho"></section>
+      </section>
+    </main>
+
+    <script>
+      // Exercício 1
+      let ondeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+      console.log(ondeVoceEsta);
+
+      // Exercício 2
+      let pai = ondeVoceEsta.parentElement;
+      pai.style.color = "red";
+      console.log(pai);
+
+      // Exercício 3
+      let primeiroFilhoDoFilho = ondeVoceEsta.firstElementChild; // document.getElementById("primeiroFilhoDoFilho")
+      primeiroFilhoDoFilho.innerText =
+        "Pense no filhote do filhote que ainda vai nascer.";
+      console.log(primeiroFilhoDoFilho);
+
+      // Exercício 4
+      let primeiroFilhoDePai = pai.firstElementChild;
+      console.log(primeiroFilhoDePai);
+
+      // Exercício 5
+      let primeiroFilhoDeElemento = ondeVoceEsta.previousElementSibling;
+      console.log(primeiroFilhoDeElemento);
+
+      // Exercício 6
+      let textoAtencao = ondeVoceEsta.parentElement.innerText;
+      console.log(textoAtencao);
+
+      // Exercício 7
+      let terceiroFilhoDeElemento = ondeVoceEsta.nextElementSibling;
+      console.log(terceiroFilhoDeElemento);
+
+      //Exercício 8
+      let terceiroFilhoDePai = pai.children[2]; // pai.firstElementChild.nextElementSibling.nextElementSibling;
+      console.log(terceiroFilhoDePai);
+    </script>
+  </body>
+</html>
