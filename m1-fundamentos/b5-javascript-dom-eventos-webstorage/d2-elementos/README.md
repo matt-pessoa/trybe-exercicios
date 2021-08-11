@@ -1,4 +1,5 @@
 # Exercícios
+## Parte 1
 
 Antes de começar, crie um arquivo HTML na pasta exercises/5_2 e copie o código abaixo:
 
@@ -82,6 +83,8 @@ Para uma melhor organização, faça commits a cada tarefa concluída. Vamos aos
 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
 
 <hr>
+
+## Parte 2
 Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
 
 1. Adicione a classe title na tag h1 criada;
