@@ -98,6 +98,43 @@
 
       console.log(document.querySelector(".right-content"));
       console.log(document.querySelector(".right-content").parentElement);
+
+      // Exercício 7
+      let image = document.createElement("img");
+      image.src = "https://picsum.photos/200";
+      image.className = "small-image";
+      sectionLeft.appendChild(image);
+
+      console.log(document.querySelector(".small-image"));
+
+      // Exercício 8
+      let list = document.createElement("ul");
+      sectionRight.appendChild(list);
+
+      function listGenerator() {
+        arrayNumbers = [
+          "um",
+          "dois",
+          "três",
+          "quatro",
+          "cinco",
+          "seis",
+          "sete",
+          "oito",
+          "nove",
+          "dez",
+        ];
+
+        for (number of arrayNumbers) {
+          let listItem = document.createElement("li");
+          listItem.textContent = number;
+
+          list.appendChild(listItem);
+        }
+      }
+      listGenerator();
+
+      // Exercício 8
     </script>
   </body>
 </html>
