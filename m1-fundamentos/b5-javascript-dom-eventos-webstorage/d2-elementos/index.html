@@ -125,7 +125,7 @@
           "dez",
         ];
 
-        for (number of arrayNumbers) {
+        for (let number of arrayNumbers) {
           let listItem = document.createElement("li");
           listItem.textContent = number;
 
@@ -135,6 +135,16 @@
       listGenerator();
 
       // Exercício 8
+      let firstH3 = document.createElement("h3");
+      let secondH3 = document.createElement("h3");
+      let thirdH3 = document.createElement("h3");
+
+      arrayOfVariables = [firstH3, secondH3, thirdH3];
+      for (let variable of arrayOfVariables) {
+        main.appendChild(variable);
+      }
+
+      console.log(main.children);
     </script>
   </body>
 </html>
