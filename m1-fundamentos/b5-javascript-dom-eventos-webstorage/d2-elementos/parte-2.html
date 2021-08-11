@@ -111,28 +111,27 @@
       let list = document.createElement("ul");
       sectionRight.appendChild(list);
 
-      function listGenerator() {
-        arrayNumbers = [
-          "um",
-          "dois",
-          "três",
-          "quatro",
-          "cinco",
-          "seis",
-          "sete",
-          "oito",
-          "nove",
-          "dez",
-        ];
-
-        for (let number of arrayNumbers) {
+      function listGenerator(arr) {
+        for (let number of arr) {
           let listItem = document.createElement("li");
           listItem.textContent = number;
 
           list.appendChild(listItem);
         }
       }
-      listGenerator();
+      arrayNumbers = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      listGenerator(arrayNumbers);
 
       // Exercício 8
       let firstH3 = document.createElement("h3");
@@ -144,6 +143,20 @@
         main.appendChild(variable);
       }
 
+      console.log(main.children);
+
+      /* Exercício 1 */
+      h1.className = "title";
+      console.log(document.querySelectorAll(".title"));
+
+      /* Exercício 2 */
+      for (let variable of arrayOfVariables) {
+        variable.className = "description";
+      }
+      console.log(document.querySelectorAll(".description"));
+
+      /* Exercício 3 */
+      main.removeChild(sectionLeft);
       console.log(main.children);
     </script>
   </body>
