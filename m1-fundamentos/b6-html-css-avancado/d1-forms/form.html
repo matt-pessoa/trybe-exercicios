@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Meu Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <label for="name">Nome</label>
+        <input
+          id="name"
+          type="text"
+          name="fullname"
+          placeholder="Seu nome..."
+          required
+        />
+
+        <label for="">Email</label>
+        <input
+          id="email"
+          type="text"
+          name="email"
+          placeholder="Seu email..."
+          required
+        />
+
+        <label for="cidade">Cidade</label>
+        <input
+          id="cidade"
+          type="text"
+          name="cidade"
+          placeholder="Cidade onde você mora..."
+          required
+        />
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required></select>
+
+        <input id="casa" type="radio" name="moradia" value="Casa" required />
+        <label for="casa">Casa</label>
+        <input
+          id="apartamento "
+          type="radio"
+          name="moradia"
+          value="Apartamento"
+          required
+        />
+        <label for="apartamento">Apartamento</label>
+        <!-- O mesmo name garante que apenas um dos radio buttons possa ser selecionado -->
+      </fieldset>
+
+      <fieldset>
+        <label for="resume">Resumo do currículo</label>
+        <textarea
+          id="resume"
+          name="resumo-curriculo"
+          maxlength="1000"
+          required
+        ></textarea>
+
+        <label for="cargo">Cargo</label>
+        <input id="cargo" type="text" maxlength="40" name="cargo" required />
+
+        <label for="desc-cargo">Descrição do cargo</label>
+        <textarea
+          id="desc-cargo"
+          maxlength="500"
+          name="cargo"
+          required
+        ></textarea>
+
+        <label for="data">Data de início</label>
+        <input id="data" type="date" name="data" />
+      </fieldset>
+
+      <button id="submit-btn">Enviar</button>
+      <button id="erase-btn">Apagar</button>
+    </div>
+  </body>
+</html>

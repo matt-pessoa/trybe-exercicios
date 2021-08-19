@@ -1,0 +1,17 @@
+body {
+  margin: 0 !important;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container {
+  width: 500px;
+  margin: auto;
+}
