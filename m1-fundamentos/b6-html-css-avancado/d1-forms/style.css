@@ -12,6 +12,11 @@ textarea {
 }
 
 .container {
-  width: 500px;
-  margin: auto;
+  max-width: 800px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
