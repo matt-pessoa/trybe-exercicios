@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Meu Form</title>
+  </head>
+  <body>
+    <header>
+      <div class="heading">
+        <h1>Form</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <fieldset>
+        <label for="name">Nome</label>
+        <input
+          class="mb-3"
+          id="name"
+          type="text"
+          name="fullname"
+          placeholder="Seu nome..."
+          required
+        />
+
+        <label for="">Email</label>
+        <input
+          class="mb-3"
+          id="email"
+          type="text"
+          name="email"
+          placeholder="Seu email..."
+          required
+        />
+
+        <label for="cidade">Cidade</label>
+        <input
+          class="mb-3"
+          id="cidade"
+          type="text"
+          name="cidade"
+          placeholder="Cidade onde você mora..."
+          required
+        />
+
+        <label for="estado">Estado</label>
+        <select class="mb-3" id="estado" name="estado" required></select>
+
+        <input
+          class="mb-3"
+          id="casa"
+          type="radio"
+          name="moradia"
+          value="Casa"
+          required
+        />
+        <label for="casa">Casa</label>
+        <input
+          class="mb-4"
+          id="apartamento "
+          type="radio"
+          name="moradia"
+          value="Apartamento"
+          required
+        />
+        <label for="apartamento">Apartamento</label>
+        <!-- O mesmo name garante que apenas um dos radio buttons possa ser selecionado -->
+      </fieldset>
+
+      <fieldset>
+        <label for="resume">Resumo do currículo</label>
+        <textarea
+          class="mb-3"
+          id="resume"
+          name="resumo-curriculo"
+          maxlength="1000"
+          required
+        ></textarea>
+
+        <label for="cargo">Cargo</label>
+        <input
+          class="mb-3"
+          id="cargo"
+          type="text"
+          maxlength="40"
+          name="cargo"
+          required
+        />
+
+        <label for="desc-cargo">Descrição do cargo</label>
+        <textarea
+          class="mb-3"
+          id="desc-cargo"
+          maxlength="500"
+          name="cargo"
+          required
+        ></textarea>
+
+        <label for="data">Data de início</label>
+        <input class="mb-3" id="data" type="date" name="data" />
+      </fieldset>
+
+      <button class="mb-3" id="submit-btn">Enviar</button>
+      <button class="mb-3" id="erase-btn">Apagar</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
