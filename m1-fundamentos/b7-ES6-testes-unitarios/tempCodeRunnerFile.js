@@ -1,8 +1,11 @@
-function calculateFactorial(num) {
+
+function recursiveFactorial(num) {
   let factorial = num;
-  for (i = (num-1); i <= 1; i -= 1) {
-    factorial *= (num - i);
+  if (num === 0 || num === 1) {
+    factorial = 1;
+  } else {
+    factorial *= recursiveFactorial(num - 1);
   }
-  console.log(factorial)
+  return factorial;
 }
-calculateFactorial(2);
+console.log(recursiveFactorial(5));
