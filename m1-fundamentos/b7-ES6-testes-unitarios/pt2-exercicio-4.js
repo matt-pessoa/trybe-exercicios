@@ -2,7 +2,7 @@ function handleReplaceString(stringDeterminada, parametro) {
   let newString = stringDeterminada.replace('x', parametro);
   return newString;
 }
-console.log(handleReplaceString('Tryber x aqui!', 'Bebeto');
+console.log(handleReplaceString('Tryber x aqui!', 'Bebeto'));
 
 const arraySkills = ['HTML', 'CSS', 'JavaScript', 'Criatividade', 'Pesquisa'];
 
