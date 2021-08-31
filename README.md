@@ -53,7 +53,7 @@ Olá, viajante! Neste repositório você encontrará todos os exercícios realiz
 - [x] 6-3: _CSS Flexbox - Part 1_
 - [x] 6-4: _CSS Flexbox - Part 2_
 - [x] 6-5: _CSS Responsivo - Mobile First_
-- [x] 6-6: _[Projeto - Trybewarts(https://github.com/tryber/sd-015-b-project-trybewarts/pull/53)_
+- [x] 6-6: _[Projeto - Trybewarts](https://github.com/tryber/sd-015-b-project-trybewarts/pull/53)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
