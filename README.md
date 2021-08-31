@@ -41,8 +41,8 @@ Olá, viajante! Neste repositório você encontrará todos os exercícios realiz
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
 - [ ] 5-5: _[Projeto - Meme Generator]()_
-- [x] 5-6: _[Projeto - Arte com Pixels]()_
-- [x] 5-7: _[Projeto - Lista de tarefas]()_
+- [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-015-b-project-pixels-art/pull/31)_
+- [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-015-b-project-todo-list/pull/111)_
 - [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
 - [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 
@@ -52,13 +52,13 @@ Olá, viajante! Neste repositório você encontrará todos os exercícios realiz
 - [x] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
 - [x] 6-3: _CSS Flexbox - Part 1_
 - [x] 6-4: _CSS Flexbox - Part 2_
-- [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - Página inicial do Facebook]()_
+- [x] 6-5: _CSS Responsivo - Mobile First_
+- [x] 6-6: _[Projeto - Trybewarts(https://github.com/tryber/sd-015-b-project-trybewarts/pull/53)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
-- [ ] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
-- [ ] 7-2: _JavaScript ES6 - Objects_
+- [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
+- [x] 7-2: _JavaScript ES6 - Objects_
 - [ ] 7-3: _Testes unitários em JavaScript_
 - [ ] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 
