@@ -5,4 +5,5 @@ const países = {
   Portugal: 'Lisboa',
 };
 const pairKeyValue = Object.entries(países);
+
 console.log(pairKeyValue);
