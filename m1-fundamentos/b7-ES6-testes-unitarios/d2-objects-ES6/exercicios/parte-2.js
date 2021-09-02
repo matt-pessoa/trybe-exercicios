@@ -26,7 +26,8 @@ newShift(lesson2, 'turno', 'noite');
 
 // Exercicio 2
 const listKeys = (obj) => {
-  console.log(Object.keys(obj));
+  const arrayOfKeys = Object.keys(obj);
+  console.log(arrayOfKeys);
 };
 listKeys(lesson1);
 
@@ -37,3 +38,10 @@ const objectLength = (obj) => {
   console.log(objLength);
 };
 objectLength(lesson3);
+
+// Exercicio 4
+const listValues = (obj) => {
+  const arrayOfValues = Object.values(obj);
+  console.log(arrayOfValues);
+};
+listValues(lesson2);
