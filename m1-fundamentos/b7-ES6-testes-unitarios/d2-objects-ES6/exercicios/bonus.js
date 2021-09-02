@@ -45,19 +45,23 @@ console.log(mathTotal(allLessons));
 const createReport = (obj, teacher) => {
   const arrayOfKeys = Object.keys(obj);
   const classes = [];
-  let numberOfStudents = 0;
+  let totalNumberOfStudents = 0;
 
   for (const key of arrayOfKeys) {
     const professorName = obj[key].professor;
+    const discipline = obj[key].materia;
+    const studentsPerClass = obj[key].numeroEstudantes;
+
     if (professorName === teacher) {
-      classes.push(obj[key].materia);
-      numberOfStudents += obj[key].numeroEstudantes;
+      classes.push(discipline);
+      totalNumberOfStudents += studentsPerClass;
     }
   }
+
   const report = {
     professor: teacher,
     aulas: classes,
-    estudantes: numberOfStudents,
+    estudantes: totalNumberOfStudents,
   };
 
   return report;
