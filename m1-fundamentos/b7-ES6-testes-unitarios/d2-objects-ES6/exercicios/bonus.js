@@ -40,3 +40,26 @@ const mathTotal = (obj) => {
   return totalMathStudents;
 };
 console.log(mathTotal(allLessons));
+
+// Exercicio 2
+const createReport = (obj, teacher) => {
+  const arrayOfKeys = Object.keys(obj);
+  const classes = [];
+  let numberOfStudents = 0;
+
+  for (const key of arrayOfKeys) {
+    const professorName = obj[key].professor;
+    if (professorName === teacher) {
+      classes.push(obj[key].materia);
+      numberOfStudents += obj[key].numeroEstudantes;
+    }
+  }
+  const report = {
+    professor: teacher,
+    aulas: classes,
+    estudantes: numberOfStudents,
+  };
+
+  return report;
+};
+console.log(createReport(allLessons, 'Maria Clara'));
