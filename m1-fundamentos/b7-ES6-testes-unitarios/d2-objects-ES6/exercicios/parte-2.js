@@ -60,3 +60,12 @@ const numberOfStudents = (obj) => {
   return total;
 };
 numberOfStudents(allLessons);
+
+// Exercicio 7
+const getValueByNumber = (obj, number) => {
+  const arrayOfValues = Object.values(obj);
+  const valueByNumber = arrayOfValues[number];
+
+  return valueByNumber;
+};
+console.log(getValueByNumber(lesson1, 0));
