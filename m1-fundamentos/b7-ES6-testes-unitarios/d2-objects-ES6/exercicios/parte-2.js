@@ -29,3 +29,11 @@ const listKeys = (obj) => {
   console.log(Object.keys(obj));
 };
 listKeys(lesson1);
+
+// Exercicio 3
+const objectLength = (obj) => {
+  const arrayOfEntries = Object.entries(obj);
+  const objLength = arrayOfEntries.length;
+  console.log(objLength);
+};
+objectLength(lesson3);
