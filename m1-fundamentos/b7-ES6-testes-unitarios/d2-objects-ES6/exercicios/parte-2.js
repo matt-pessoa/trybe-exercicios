@@ -49,3 +49,14 @@ listValues(lesson2);
 // Exercicio 5
 const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 }); // assign um objeto contendo lesson1, lesson2 e lesson3
 console.log(allLessons);
+
+// Exercicio 6
+const numberOfStudents = (obj) => {
+  const arrayOfKeys = Object.keys(obj);
+  let total = 0;
+  for (let key of arrayOfKeys) {
+    total += obj[key].numeroEstudantes; // nao posso usar dot notation em [key] pois cada key é uma string ['lesson1', 'lesson2', 'lesson3']
+  }
+  return total;
+};
+numberOfStudents(allLessons);
