@@ -18,7 +18,14 @@ const lesson3 = {
   turno: 'noite',
 };
 
+// Exercicio 1
 const newShift = (obj, newKey, newValue) => {
   obj[newKey] = newValue;
 };
 newShift(lesson2, 'turno', 'noite');
+
+// Exercicio 2
+const listKeys = (obj) => {
+  console.log(Object.keys(obj));
+};
+listKeys(lesson1);
