@@ -33,3 +33,61 @@ Object.keys(coolestTvShow);
 // Retorno:
 // ['name', 'genre', 'createdBy', 'favoriteCharacter', 'quote', 'seasons']
 ```
+## Parte III - Object.values()
+O método `Object.values()` segue a mesma lógica do `Object.keys()`, ou seja, retorna um array com strings correspondentes ao valores encontrados em um objeto. A ordenação dos valores é a memsma que a dada pelo loop `for/in`.
+
+### Exemplo:
+```js
+const coolestTvShow = {
+  name: "BoJack Horseman",
+  genre: "adult animation",
+  createdBy: "Raphael Bob-Waksberg",
+  favoriteCharacter: "Princess Carolyn",
+  quote: "Princess Carolyn always lands on her feet.",
+  seasons: 6,
+};
+```
+Para percorrer as chaves de um objeto, até então eu usaria o loop `for/in`. `For/in` percorre o index de um objeto.
+```js
+const arrayOfValues = [];
+for (const property in coolestTvShow) {
+  arrayOfValues.push(property);
+}
+
+// Retorno:
+// ['BoJack Horseman','adult animation','Raphael Bob-Waksberg','Princess Carolyn','Princess Carolyn always lands on her feet.', 6]
+```
+Mas existe um método mais robusto para alcançar o mesmo resultado: `Object.values()`
+```js
+Object.values(coolestTvShow);
+
+// Retorno:
+// ['BoJack Horseman','adult animation','Raphael Bob-Waksberg','Princess Carolyn','Princess Carolyn always lands on her feet.', 6]
+```
+
+## Parte IV - Object.entries()
+O método `Object.entries()` retorna um array cujos elementos também são arrays (um **array de arrays**) para cada par `chave` e `valor`.
+
+[['chave1', 'valor1'], ['chave2', valor2]]
+
+```js
+const coolestTvShow = {
+  name: "BoJack Horseman",
+  genre: "adult animation",
+  createdBy: "Raphael Bob-Waksberg",
+  favoriteCharacter: "Princess Carolyn",
+  quote: "Princess Carolyn always lands on her feet.",
+  seasons: 6,
+};
+Object.entries(coolestTbShow);
+
+// Retorno:
+// // [
+//   [ 'name', 'BoJack Horseman' ],
+//   [ 'genre', 'adult animation' ],
+//   [ 'createdBy', 'Raphael Bob-Waksberg' ],
+//   [ 'favoriteCharacter', 'Princess Carolyn' ],
+//   [ 'quote', 'Princess Carolyn always lands on her feet.' ],
+//   [ 'seasons', 6 ]
+// ]
+```
