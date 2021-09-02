@@ -78,7 +78,7 @@ const verifyPair = (obj, key, value) => {
   for (const index in arrayOfEntries) {
     if (
       key === arrayOfEntries[index][0] &&
-      value === arrayOfEntries[index][1] // primeiro elemento do array de numero index do arrayOfEntries
+      value === arrayOfEntries[index][1] // primeiro elemento do array de numero indext do arrayOfEntries
     ) {
       isEqual = true;
     }
@@ -88,4 +88,4 @@ const verifyPair = (obj, key, value) => {
 console.log(verifyPair(lesson3, 'turno', 'noite'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 
-// ['turno', 'noite'] == ['turno', 'noite'];  // não é possível comparar arrays em JS
+// ['turno', 'noite'] === ['turno', 'noite']; --> false  // não é possível comparar arrays em JS
