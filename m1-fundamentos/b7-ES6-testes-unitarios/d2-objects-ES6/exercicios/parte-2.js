@@ -45,3 +45,7 @@ const listValues = (obj) => {
   console.log(arrayOfValues);
 };
 listValues(lesson2);
+
+// Exercicio 5
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 }); // assign um objeto contendo lesson1, lesson2 e lesson3
+console.log(allLessons);
