@@ -69,3 +69,23 @@ const getValueByNumber = (obj, number) => {
   return valueByNumber;
 };
 console.log(getValueByNumber(lesson1, 0));
+
+// Exercicio 8
+const verifyPair = (obj, key, value) => {
+  const arrayOfEntries = Object.entries(obj);
+  let isEqual = false;
+
+  for (const index in arrayOfEntries) {
+    if (
+      key === arrayOfEntries[index][0] &&
+      value === arrayOfEntries[index][1] // primeiro elemento do array de numero index do arrayOfEntries
+    ) {
+      isEqual = true;
+    }
+  }
+  return isEqual;
+};
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+// ['turno', 'noite'] == ['turno', 'noite'];  // não é possível comparar arrays em JS
