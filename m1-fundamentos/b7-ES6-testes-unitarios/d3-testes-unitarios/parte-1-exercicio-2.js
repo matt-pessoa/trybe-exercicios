@@ -14,3 +14,6 @@ const assert = require('assert');
 // Teste 1
 const expectedArray = [1, 2, 4];
 assert.deepStrictEqual(expectedArray, myRemove([1, 2, 3, 4], 3));
+
+// Teste 2
+assert.notDeepStrictEqual([1, 2, 3, 4], myRemove([1, 2, 3, 4], 3));
