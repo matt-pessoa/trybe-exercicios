@@ -20,3 +20,6 @@ const assert = require('assert');
 assert.strictEqual(typeof greetPeople, 'function');
 assert.strictEqual(true, Array.isArray(parameter));
 assert.deepStrictEqual(greetPeople(parameter), result);
+const myArray = ['Alfie', 'Tommy', 'Changreta'];
+greetPeople(myArray);
+assert.deepStrictEqual(['Alfie', 'Tommy', 'Changreta'], myArray);
