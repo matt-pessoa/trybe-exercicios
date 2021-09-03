@@ -1,8 +1,8 @@
 // ! A função, em vez de retornar uma string com as vogais substituidas por numeros, retorna um array com as consoantes substituidas por underlines.
 /**
- * todo apenas consoantes devem ser adicionadas
+ * todo apenas consoantes devem ser adicionadas OK
  * todo numeros devem ser adicionados no lugar das vogais
- * todo typeof output === string
+ * todo typeof output === string OK
  *
  */
 const removeVowels = (word) => {
@@ -22,7 +22,11 @@ const removeVowels = (word) => {
       results.push('_');
     }
   }
-  return results;
+  let completeWord = '';
+  for (letter of results) {
+    completeWord += letter;
+  }
+  return completeWord;
 };
 
 const parameter = 'Dayane';
