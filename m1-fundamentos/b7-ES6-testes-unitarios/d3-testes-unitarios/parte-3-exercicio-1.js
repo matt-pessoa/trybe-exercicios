@@ -18,5 +18,5 @@ const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
 const assert = require('assert');
 
 assert.strictEqual(typeof greetPeople, 'function');
-// assert.deepStrictEqual(greetPeople(parameter), result); // actual: 'Hello IrinaAshleighElsa --> Não é um array, não tem um 'Hello' para cada nome
-assert.strictEqual(true, Array.isArray(parameter));
+assert.deepStrictEqual(greetPeople(parameter), result); // actual: 'Hello IrinaAshleighElsa --> Não é um array, não tem um 'Hello' para cada nome
+assert.strictEqual(true, Array.isArray(parameter)); // É um array, mas o output ainda é: [ 'Hello Irina', 'Hello IrinaAshleigh', 'Hello IrinaAshleighElsa' ], ou seja, os nomes estão concatenados em vez de aparecer um de cada vez
