@@ -1,6 +1,6 @@
 function secondThirdSmallest(array) {
   let results = [];
-  let arraySorted = array.slice();
+  let arraySorted = array.slice(); // cria uma cópia deste array
   arraySorted = arraySorted.sort(function (x, y) {
     return x - y;
   });
