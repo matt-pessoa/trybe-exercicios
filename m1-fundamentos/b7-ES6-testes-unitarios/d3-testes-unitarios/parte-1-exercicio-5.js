@@ -17,7 +17,10 @@ const obj3 = {
 const assert = require('assert');
 
 // ? obj1 === obj2
-assert.deepStrictEqual(obj1, obj2);
+assert.deepStrictEqual(obj1, obj2); // true
 
 // ? obj1 === obj3
-assert.deepStrictEqual(obj1, obj3);
+assert.deepStrictEqual(obj1, obj3); // false
+
+// ? obj2 === obj3
+assert.deepStrictEqual(obj2, obj3); // false
