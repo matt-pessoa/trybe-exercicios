@@ -11,3 +11,6 @@ const assert = require('assert');
 
 // Teste 1
 assert.strictEqual('fizzbuzz', myFizzBuzz(15));
+
+// Teste 2
+assert.strictEqual('fizz', myFizzBuzz(6));
