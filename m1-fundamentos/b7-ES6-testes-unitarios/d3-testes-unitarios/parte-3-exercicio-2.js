@@ -8,6 +8,7 @@
 const removeVowels = (word) => {
   const characters = word.split('');
   const results = [];
+  let counter = 0;
 
   for (let index = 0; index < characters.length; index += 1) {
     if (
@@ -19,7 +20,8 @@ const removeVowels = (word) => {
     ) {
       results.push(characters[index]);
     } else {
-      results.push('_');
+      counter += 1;
+      results.push(counter);
     }
   }
   let completeWord = '';
@@ -38,5 +40,5 @@ const result = 'D1y2n3';
 const assert = require('assert');
 
 assert.strictEqual(typeof removeVowels, 'function');
-
+assert.strictEqual(typeof removeVowels(parameter), 'string');
 assert.strictEqual(removeVowels(parameter), result);
