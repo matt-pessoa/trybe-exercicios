@@ -17,3 +17,8 @@ assert.deepStrictEqual(expectedArray, myRemove([1, 2, 3, 4], 3));
 
 // Teste 2
 assert.notDeepStrictEqual([1, 2, 3, 4], myRemove([1, 2, 3, 4], 3));
+
+// Teste 3
+const myList = [5, 6, 7, 8];
+myRemove(myList, 5);
+assert.deepStrictEqual(myList, [5, 6, 7, 8]);
