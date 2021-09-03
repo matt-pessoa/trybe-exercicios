@@ -15,3 +15,6 @@ const assert = require('assert');
 
 // Teste 1
 assert.deepStrictEqual([1, 2, 4], myRemoveWithoutCopy([1, 2, 3, 4], 3));
+
+// Teste 2
+assert.notDeepStrictEqual([1, 2, 3, 4], myRemoveWithoutCopy([1, 2, 3, 4], 3));
