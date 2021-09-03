@@ -1,10 +1,3 @@
-// ! A função, em vez de retornar uma string com as vogais substituidas por numeros, retorna um array com as consoantes substituidas por underlines.
-/**
- * todo apenas consoantes devem ser adicionadas OK
- * todo numeros devem ser adicionados no lugar das vogais
- * todo typeof output === string OK
- *
- */
 const removeVowels = (word) => {
   const characters = word.split('');
   const results = [];
