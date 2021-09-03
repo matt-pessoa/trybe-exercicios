@@ -1,8 +1,3 @@
-/**
- * ! A função possui os seguintes erros:
- * todo expected: output ser array // actual: number OK
- * todo expected: array com numeros > 10 // actual: soma dos numeros maiores que 10
- */
 const greaterThanTen = (array) => {
   let results = [];
   for (let index = 0; index < array.length; index += 1) {
