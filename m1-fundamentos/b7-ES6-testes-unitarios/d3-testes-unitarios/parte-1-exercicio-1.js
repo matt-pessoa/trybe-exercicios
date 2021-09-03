@@ -16,4 +16,9 @@ assert.strictEqual(sum(4, 5), 9);
 assert.strictEqual(sum(0, 0), 0);
 
 // Teste 3
-assert.strictEqual(sum(4, '5'), 5); // Teste 4: throw new Error('parameters must be numbers');
+assert.strictEqual(sum(4, '5'), 5);
+
+// Teste 4: throw new Error('parameters must be numbers');
+assert.throws(() => {
+  sum(4, '5');
+});
