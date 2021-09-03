@@ -1,9 +1,10 @@
 function secondThirdSmallest(array) {
   let results = [];
-  array.sort(function (x, y) {
+  let arraySorted = array.slice();
+  arraySorted = arraySorted.sort(function (x, y) {
     return x - y;
   });
-  results = [array[1], array[2]];
+  results = [arraySorted[1], arraySorted[2]];
   return results;
 }
 
@@ -15,8 +16,8 @@ const result = [5, 6];
  */
 const assert = require('assert');
 
-assert.strictEqual(typeof secondThirdSmallest, 'function');
-assert.deepStrictEqual(secondThirdSmallest(parameter), result);
+// assert.strictEqual(typeof secondThirdSmallest, 'function');
+// assert.deepStrictEqual(secondThirdSmallest(parameter), result);
 const myArray = [4, 5, 29, 1, 33, 3, 12];
 secondThirdSmallest(myArray);
-assert.strictEqual([4, 5, 29, 1, 33, 3, 12], myArray);
+assert.deepStrictEqual([4, 5, 29, 1, 33, 3, 12], myArray);
