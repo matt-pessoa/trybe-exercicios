@@ -27,3 +27,4 @@ const result = 'D1y2n3';
 const assert = require('assert');
 
 assert.strictEqual(typeof removeVowels, 'function');
+assert.strictEqual(removeVowels(parameter), result); // A função, em vez de retornar uma string com as vogais substituidas por numeros, retorna um array com as consoantes substituidas por underlines,
