@@ -35,3 +35,6 @@ const assert = require('assert');
 assert.strictEqual(typeof removeVowels, 'function');
 assert.strictEqual(typeof removeVowels(parameter), 'string');
 assert.strictEqual(removeVowels(parameter), result);
+const myString = 'Matheus';
+removeVowels(myString);
+assert.strictEqual('Matheus', myString);
