@@ -15,5 +15,5 @@ const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
  */
 const assert = require('assert');
 
-// ? Verifica se greetPeople é uma função
-assert.strictEqual(typeof greetPeople, 'function');
+// assert.strictEqual(typeof greetPeople, 'function');
+assert.deepStrictEqual(greetPeople(parameter), result);
