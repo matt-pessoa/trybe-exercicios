@@ -24,3 +24,5 @@ const assert = require('assert');
 assert.strictEqual(typeof greaterThanTen, 'function');
 assert.strictEqual(true, Array.isArray(greaterThanTen(parameter)));
 assert.deepStrictEqual(greaterThanTen(parameter), result);
+const myArray = [1, 28, 33, 7];
+assert.deepStrictEqual([1, 28, 33, 7], myArray);
