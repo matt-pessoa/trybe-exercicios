@@ -15,5 +15,5 @@ const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
  */
 const assert = require('assert');
 
-// assert.strictEqual(typeof greetPeople, 'function');
-assert.deepStrictEqual(greetPeople(parameter), result);
+assert.strictEqual(typeof greetPeople, 'function');
+assert.deepStrictEqual(greetPeople(parameter), result); // actual: 'Hello IrinaAshleighElsa --> Não é um array, não tem um 'Hello' para cada nome
