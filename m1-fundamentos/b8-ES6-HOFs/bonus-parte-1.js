@@ -25,3 +25,13 @@ const dragonDamage = (dragonSheet) => {
     Math.floor(Math.random() * (dragonSheet['strength'] - 15)) + 15;
   return damage;
 };
+
+const warriorDamage = (warriorSheet) => {
+  const damage =
+    Math.floor(
+      Math.random() *
+        (warriorSheet['strength'] * warriorSheet['weaponDmg'] -
+          warriorSheet['strength'])
+    ) + warriorSheet['strength'];
+  return damage;
+};
