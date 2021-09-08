@@ -3,11 +3,7 @@ const generateRandomNumber = (bet, func) => {
   return func(bet, random);
 };
 
-const handleCheck = (bet, randomNumber) => {
-  if (bet === randomNumber) {
-    return 'Parabéns você ganhou';
-  }
-  return 'Tente novamente';
-};
+const handleCheck = (bet, randomNumber) =>
+  bet === randomNumber ? 'Parabéns você ganhou' : 'Tente novamente';
 
 console.log(generateRandomNumber(2, handleCheck));
