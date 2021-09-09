@@ -20,18 +20,51 @@ const dragon = {
 
 const battleMembers = { mage, warrior, dragon };
 
-const dragonDamage = (dragonSheet) => {
-  const damage =
-    Math.floor(Math.random() * (dragonSheet['strength'] - 15)) + 15;
-  return damage;
+const dragonAttack = (dragonSheet) => {
+  const minDmg = 15;
+  const maxDmg = dragonSheet['strength'];
+  const dragonDmg = Math.floor(Math.random() * (maxDmg - minDmg)) + minDmg;
+  return dragonDmg;
 };
 
-const warriorDamage = (warriorSheet) => {
-  const damage =
-    Math.floor(
-      Math.random() *
-        (warriorSheet['strength'] * warriorSheet['weaponDmg'] -
-          warriorSheet['strength'])
-    ) + warriorSheet['strength'];
-  return damage;
+const warriorAttack = (warriorSheet) => {
+  const minDmg = warriorSheet['strength'];
+  const maxDmg = warriorSheet['strength'] * warriorSheet['weaponDmg'];
+  const warriorDmg = Math.floor(Math.random() * (maxDmg - minDmg)) + minDmg;
+  return warriorDmg;
 };
+
+let round = 1;
+const manaCalculator = (mageSheet) => {
+  const totalMana = mageSheet['mana'];
+  const actualMana = totalMana - 15 * round;
+  round += 1;
+
+  return actualMana;
+};
+
+const mageAttack = (mageSheet) => {
+  const mageStatus = {
+    mana: manaCalculator(mageSheet),
+  };
+
+  if (mageStatus.mana > 15) {
+    mageStatus.damage =
+      Math.floor(
+        Math.random() *
+          (2 * mageSheet['intelligence'] - mageSheet['intelligence'])
+      ) + mageSheet['intelligence'];
+  } else {
+    mageStatus.damage = 'Não possui mana suficiente';
+    mageStatus.mana = 15;
+  }
+
+  return mageStatus;
+};
+
+/**
+ * * Exemplo de vários ataques do mago
+ */
+for (let turno = 0; turno < 10; turno += 1) {
+  console.log(mageAttack(mage));
+}
