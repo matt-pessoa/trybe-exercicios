@@ -24,6 +24,7 @@ const dragonAttack = (dragonSheet) => {
   const minDmg = 15;
   const maxDmg = dragonSheet['strength'];
   const dragonDmg = Math.floor(Math.random() * (maxDmg - minDmg)) + minDmg;
+
   return dragonDmg;
 };
 
@@ -31,6 +32,7 @@ const warriorAttack = (warriorSheet) => {
   const minDmg = warriorSheet['strength'];
   const maxDmg = warriorSheet['strength'] * warriorSheet['weaponDmg'];
   const warriorDmg = Math.floor(Math.random() * (maxDmg - minDmg)) + minDmg;
+
   return warriorDmg;
 };
 
@@ -65,6 +67,19 @@ const mageAttack = (mageSheet) => {
 /**
  * * Exemplo de vários ataques do mago
  */
-for (let turno = 0; turno < 10; turno += 1) {
-  console.log(mageAttack(mage));
-}
+// for (let turno = 0; turno < 10; turno += 1) {
+//   console.log(mageAttack(mage));
+// }
+
+/**
+ * ! Parte 2
+ */
+
+const gameActions = {
+  // Crie as HOFs neste objeto.
+  warriorRound: (warriorAttack, dragonSheet, warriorSheet) => {
+    dragonSheet.healthPoints -= warriorAttack;
+    warriorSheet.damage = warriorAttack;
+  },
+};
+gameActions.warriorRound(warriorAttack(warrior), dragon, warrior);
