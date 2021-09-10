@@ -16,8 +16,8 @@ const result = [5, 6];
  */
 const assert = require('assert');
 
-// assert.strictEqual(typeof secondThirdSmallest, 'function');
-// assert.deepStrictEqual(secondThirdSmallest(parameter), result);
+assert.strictEqual(typeof secondThirdSmallest, 'function');
+assert.deepStrictEqual(secondThirdSmallest(parameter), result);
 const myArray = [4, 5, 29, 1, 33, 3, 12];
 secondThirdSmallest(myArray);
 assert.deepStrictEqual([4, 5, 29, 1, 33, 3, 12], myArray);
