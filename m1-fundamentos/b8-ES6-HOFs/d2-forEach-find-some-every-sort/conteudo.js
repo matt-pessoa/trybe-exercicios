@@ -1,5 +1,5 @@
 /**
- * ? Para fixar - forEach
+ * ! Para fixar - forEach
  * * https://codepen.io/pen/?template=LYZPEwV
  */
 const emailListInData = [
@@ -16,7 +16,7 @@ const showEmailList = (email) => {
 emailListInData.forEach((element) => showEmailList(element));
 
 /**
- * ? Para fixar - find
+ * ! Para fixar - find
  */
 
 // ? 1 - Utilize o find para retornar o primeiro número do array que é divisível por 3 e 5 , caso ele exista
@@ -43,9 +43,8 @@ const findNameWithFiveLetters = (array) => {
 
 console.log(findNameWithFiveLetters(names));
 
-/**
- * ? 3 - Utilize o find para encontrar a música com id igual a 31031685 , caso ela exista
- */
+// ? 3 - Utilize o find para encontrar a música com id igual a 31031685 , caso ela exista
+
 const musicas = [
   { id: '31031685', title: 'Partita in C moll BWV 997' },
   { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
@@ -60,3 +59,16 @@ function findMusic(id) {
 }
 
 console.log(findMusic('31031685'));
+
+/**
+ * ! Para fixar
+ */
+// ? 1 - Escreva uma função que dado um array de nomes e um nome retorne true se ele estiver contido e caso contrário, retorne false , use some ;
+const peopleNames = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  //Adicione seu código aqui
+  return arr.some((element) => element === name);
+};
+
+console.log(hasName(peopleNames, 'Ana'));
