@@ -4,5 +4,6 @@
     - Dica: use a função `find` .
 
 2. Retorne o nome do livro de menor nome.
-    - Dica: use a função forEach .
+    - Dica: use a função `forEach` .
 
+3. Encontre o primeiro livro cujo nome possui 26 caracteres.
