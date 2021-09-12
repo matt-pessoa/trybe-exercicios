@@ -106,3 +106,8 @@ const objPeople = [
 objPeople.sort((a, b) => a.age - b.age); // recupera o valor de age dos objetos
 
 console.log(objPeople);
+
+// ? 2 - Modifique o sort do exercício anterior para que ordene o array pela idade das pessoas em ordem decrescente .
+objPeople.sort((a, b) => b.age - a.age);
+
+console.log(objPeople);
