@@ -7,3 +7,5 @@
     - Dica: use a função `forEach` .
 
 3. Encontre o primeiro livro cujo nome possui 26 caracteres.
+
+4. Ordene os livros por data de lançamento em ordem decrescente.
