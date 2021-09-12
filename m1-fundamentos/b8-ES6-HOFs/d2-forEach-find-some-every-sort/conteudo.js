@@ -89,3 +89,20 @@ const verifyAges = (arr, minimumAge) => {
 };
 
 console.log(verifyAges(people, 18));
+
+/**
+ * ! Para fixar - sort
+ */
+// ? 1 - Utilize a sort para ordenar o array pela idade das pessoas em ordem crescente .
+const objPeople = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+// objPeople.sort((a, b) => Object.values(a)[1] - Object.values(b)[1]);
+objPeople.sort((a, b) => a.age - b.age); // recupera o valor de age dos objetos
+
+console.log(objPeople);
