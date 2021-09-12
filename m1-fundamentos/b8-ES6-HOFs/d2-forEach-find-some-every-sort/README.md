@@ -9,3 +9,5 @@
 3. Encontre o primeiro livro cujo nome possui 26 caracteres.
 
 4. Ordene os livros por data de lançamento em ordem decrescente.
+
+5. Faça uma função que retorne `true` , se todas as pessoas autoras nasceram no século XX, ou `false` , caso contrário.
