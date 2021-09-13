@@ -1,23 +1,3 @@
-# Exercícios
-
-1. Dada uma matriz, transforme em um array.
-```js
-const assert = require('assert');
-
-const arrays = [
-  ['1', '2', '3'],
-  [true],
-  [4, 5, 6],
-];
-
-function flatten() {
-  // escreva seu código aqui
-}
-
-assert.deepStrictEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
-```
-Para os exercícios 2, 3 e 4 considere o seguinte array:
-```js
 const assert = require('assert');
 
 const books = [
@@ -82,14 +62,19 @@ const books = [
     releaseYear: 1928,
   },
 ];
-```
-2. Crie uma string com os nomes de todas as pessoas autoras.
-```js
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+
+// Adicione o código do exercício aqui:
+const expectedResult =
+  'George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.';
 
 function reduceNames() {
   // escreva seu código aqui
+  const arrayOfNames = books.map((element) => element.author.name);
+  const stringOfNames = arrayOfNames.reduce((acc, curVal) => {
+    return `${acc}, ${curVal}`;
+  }, '');
+
+  return `${stringOfNames.slice(2)}.`;
 }
 
 assert.strictEqual(reduceNames(), expectedResult);
-```
