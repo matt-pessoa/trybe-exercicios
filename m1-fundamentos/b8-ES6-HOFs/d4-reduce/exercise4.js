@@ -64,19 +64,33 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = 43;
+const expectedResult = {
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  genre: 'Fantasia',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
+};
 
-function averageAge() {
+function longestNamedBook() {
   // escreva seu código aqui
-  const arrayOfAges = books.map(
-    (element) => element.releaseYear - element.author.birthYear
-  );
-  const sumAll = (acc, curVal) => {
-    return acc + curVal;
-  };
-  const mean = arrayOfAges.reduce(sumAll) / arrayOfAges.length;
+  const findLargestName = (preVal, curVal) =>
+    preVal.name.length > curVal.name.length ? preVal : curVal;
 
-  return mean;
+  return books.reduce(findLargestName);
 }
 
-assert.strictEqual(averageAge(), expectedResult);
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
+
+// function longestNamedBook() {
+//   const findLargestName = (preVal, curVal) => {
+//     if (preVal.name.length > curVal.name.length) {
+//       return preVal;
+//     }
+//     return curVal;
+//   };
+//   return books.reduce(findLargestName);
+// }
