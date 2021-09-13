@@ -1,23 +1,3 @@
-# Exercícios
-
-1. Dada uma matriz, transforme em um array.
-```js
-const assert = require('assert');
-
-const arrays = [
-  ['1', '2', '3'],
-  [true],
-  [4, 5, 6],
-];
-
-function flatten() {
-  // escreva seu código aqui
-}
-
-assert.deepStrictEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
-```
-Para os exercícios 2, 3 e 4 considere o seguinte array:
-```js
 const assert = require('assert');
 
 const books = [
@@ -82,25 +62,21 @@ const books = [
     releaseYear: 1928,
   },
 ];
-```
-2. Crie uma string com os nomes de todas as pessoas autoras.
-```js
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function reduceNames() {
-  // escreva seu código aqui
-}
-
-assert.strictEqual(reduceNames(), expectedResult);
-```
-
-3. Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
-```js
+// Adicione o código do exercício aqui:
 const expectedResult = 43;
 
 function averageAge() {
   // escreva seu código aqui
+  const arrayOfAges = books.map(
+    (element) => element.releaseYear - element.author.birthYear
+  );
+  const sumAll = (acc, curVal, index, array) => {
+    return acc + curVal;
+  };
+  const mean = arrayOfAges.reduce(sumAll) / arrayOfAges.length;
+
+  return mean;
 }
 
 assert.strictEqual(averageAge(), expectedResult);
-```
