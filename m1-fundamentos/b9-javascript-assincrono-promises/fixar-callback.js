@@ -56,8 +56,9 @@ const printErrorMessage = (error) =>
 
 const getCountry = (onSuccess, onFailure) => {
   setTimeout(() => {
-    const didOperationSucceed = Math.random() >= 0.5;
+    const didOperationSucceed = Math.random() >= 0.5; // gera um numero aleatorio entre 0 e 1
     if (didOperationSucceed) {
+      // se for maior que 0.5, sucesso (true)!
       const country = {
         name: 'Brazil',
         hdi: 0.759,
