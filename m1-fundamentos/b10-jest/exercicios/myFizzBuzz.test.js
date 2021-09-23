@@ -8,4 +8,8 @@ describe('Exercício 3', () => {
   it('Verifica se myFizzBuzz(9) retorna "fizz"', () => {
     expect(myFizzBuzz(9)).toMatch('fizz');
   });
+
+  it('Verifica se myFizzBuzz(25) retorna "buzz"', () => {
+    expect(myFizzBuzz(25)).toMatch('buzz');
+  });
 });
