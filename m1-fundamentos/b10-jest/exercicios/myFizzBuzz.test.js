@@ -12,4 +12,8 @@ describe('Exercício 3', () => {
   it('Verifica se myFizzBuzz(25) retorna "buzz"', () => {
     expect(myFizzBuzz(25)).toMatch('buzz');
   });
+
+  it('Verfica se myFizzBuzz("não sou um número") retorna false', () => {
+    expect(myFizzBuzz('não sou um número')).toBe(false);
+  });
 });
