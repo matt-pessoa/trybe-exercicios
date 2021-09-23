@@ -16,4 +16,8 @@ describe('Exercício 3', () => {
   it('Verfica se myFizzBuzz("não sou um número") retorna false', () => {
     expect(myFizzBuzz('não sou um número')).toBe(false);
   });
+
+  it('Verifica se myFizzBuzz(49) retorna 49', () => {
+    expect(myFizzBuzz(49)).toBe(49);
+  });
 });
