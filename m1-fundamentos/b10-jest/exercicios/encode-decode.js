@@ -23,7 +23,7 @@ function decode(str) {
 
   let newStr = '';
   for (letter of str) {
-    if (numbers.includes(letter)) {
+    if (numbers.map((element) => element.toString()).includes(letter)) {
       newStr +=
         vowels[
           numbers.indexOf(
@@ -37,5 +37,7 @@ function decode(str) {
 
   return newStr;
 }
+
+console.log(decode('12345'));
 
 module.exports = { encode, decode };
