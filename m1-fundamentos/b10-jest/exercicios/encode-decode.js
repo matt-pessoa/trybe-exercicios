@@ -1,7 +1,7 @@
 function encode(str) {
   // seu código aqui
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-  const numbers = ['1', '2', '3', '4', '5'];
+  const numbers = [1, 2, 3, 4, 5];
 
   let newStr = '';
   for (letter of str) {
@@ -19,13 +19,17 @@ function encode(str) {
 function decode(str) {
   // seu código aqui
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-  const numbers = ['1', '2', '3', '4', '5'];
+  const numbers = [1, 2, 3, 4, 5];
 
   let newStr = '';
   for (letter of str) {
     if (numbers.includes(letter)) {
       newStr +=
-        vowels[numbers.indexOf(numbers.find((element) => element === letter))];
+        vowels[
+          numbers.indexOf(
+            numbers.find((element) => element.toString() === letter)
+          )
+        ];
     } else {
       newStr += letter;
     }
@@ -34,4 +38,4 @@ function decode(str) {
   return newStr;
 }
 
-// module.exports = { encode, decode };
+module.exports = { encode, decode };
