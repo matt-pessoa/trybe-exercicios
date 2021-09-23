@@ -19,11 +19,11 @@ function encode(str) {
 function decode(str) {
   // seu código aqui
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-  const numbers = [1, 2, 3, 4, 5];
+  const numbers = ['1', '2', '3', '4', '5'];
 
   let newStr = '';
   for (letter of str) {
-    if (numbers.map((element) => element.toString()).includes(letter)) {
+    if (numbers.includes(letter)) {
       newStr +=
         vowels[
           numbers.indexOf(
@@ -31,13 +31,11 @@ function decode(str) {
           )
         ];
     } else {
-      newStr += letter;
+      newStr += `${letter}`;
     }
   }
 
   return newStr;
 }
-
-console.log(decode('12345'));
 
 module.exports = { encode, decode };

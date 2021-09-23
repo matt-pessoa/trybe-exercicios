@@ -23,10 +23,6 @@ describe('Exercício 4', () => {
   });
 
   it('Para a função decode, testa se numeros acima de 5 permanecem os mesmos', () => {
-    expect(
-      encodeDecode
-        .decode('6 7 8 9 10 54 33 21 11')
-        .toMatch('6 7 8 9 10 54 33 21 11')
-    );
+    expect(encodeDecode.decode('6 7 8 9')).toMatch('6 7 8 9');
   });
 });
