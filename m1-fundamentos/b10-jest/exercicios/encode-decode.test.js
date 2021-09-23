@@ -25,4 +25,14 @@ describe('Exercício 4', () => {
   it('Para a função decode, testa se numeros acima de 5 permanecem os mesmos', () => {
     expect(encodeDecode.decode('6 7 8 9')).toMatch('6 7 8 9');
   });
+
+  it('Testa se a string que é retornada por encode tem o mesmo número de caracteres que a string passada como parâmetro.', () => {
+    const string = 'ameixa';
+    expect(encodeDecode.encode(string).length).toBe(string.length);
+  });
+
+  it('Testa se a string que é retornada por decode tem o mesmo número de caracteres que a string passada como parâmetro.', () => {
+    const string = '1m23x1';
+    expect(encodeDecode.decode(string).length).toBe(string.length);
+  });
 });
