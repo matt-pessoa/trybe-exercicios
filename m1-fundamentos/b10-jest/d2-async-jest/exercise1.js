@@ -3,7 +3,6 @@ const uppercase = (str, callback) => {
     callback(str.toUpperCase());
   }, 500);
 };
-uppercase('mini me', console.log);
 // Função assíncrona (setTimeout)
 
 module.exports = uppercase;
