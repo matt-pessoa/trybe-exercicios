@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(226, 43, 150);
+  padding: 2rem;
+  color: antiquewhite;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(144, 43, 226);
+  padding: 2rem;
+  color: antiquewhite;
+  font-size: large;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(43, 55, 226);
+  padding: 2.13rem;
+  color: antiquewhite;
+}
