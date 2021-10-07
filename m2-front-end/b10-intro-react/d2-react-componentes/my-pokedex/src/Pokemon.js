@@ -5,20 +5,25 @@ class Pokemon extends React.Component {
   render() {
     return (
       <div className={`card ${this.props.pokemon.type}`}>
+        <h2 key='pokemon-name' class='name'>
+          {this.props.pokemon.name}
+        </h2>
         <div className='info'>
-          <h2 key='pokemon-name'>{this.props.pokemon.name}</h2>
-          <p key='pokemon-type'>{this.props.pokemon.type}</p>
-          <p key='pokemon-weight'>
-            {this.props.pokemon.averageWeight.value}{' '}
-            {this.props.pokemon.averageWeight.measurementUnit}
-          </p>
-        </div>
-        <div className='pok-image'>
-          <img
-            key='pokemon-image'
-            src={this.props.pokemon.image}
-            alt={this.props.pokemon.name}
-          />
+          <div className='stats'>
+            <p key='pokemon-type'>{this.props.pokemon.type}</p>
+            <p key='pokemon-weight'>
+              {this.props.pokemon.averageWeight.value}{' '}
+              {this.props.pokemon.averageWeight.measurementUnit}
+            </p>
+          </div>
+          <div className='pok-img'>
+            <img
+              key='image'
+              className='pokemon-image'
+              src={this.props.pokemon.image}
+              alt={this.props.pokemon.name}
+            />
+          </div>
         </div>
       </div>
     );
