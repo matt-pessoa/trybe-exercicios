@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pokemons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  height: 30vh;
+  margin: 5px;
+  background-color: gray;
+  border-radius: 20px;
+  display: flex;
+}
+
+.Electric {
+  background-color: #f2cb55;
+}
+
+.Fire {
+  background-color: #f1a34d;
+}
+
+.Bug {
+  background-color: #8bd674;
+}
+
+.Poison {
+  background-color: #a65dcc;
+}
+
+.Psychic {
+  background-color: #cc5dc6;
+}
+
+.Normal {
+  background-color: #a8a878;
+}
+
+.Dragon {
+  background-color: #7038f8;
+}
