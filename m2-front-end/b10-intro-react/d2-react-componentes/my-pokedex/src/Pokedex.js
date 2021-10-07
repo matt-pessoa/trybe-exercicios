@@ -9,7 +9,7 @@ class Pokedex extends React.Component {
       <section className='pokedex'>
         <div className='container'>
           <header>
-            <h1>Pokedex</h1>
+            <h1>Pokédex</h1>
           </header>
 
           <div className='pokemons'>

@@ -10,7 +10,9 @@ class Pokemon extends React.Component {
         </h2>
         <div className='info'>
           <div className='stats'>
-            <p key='pokemon-type'>{this.props.pokemon.type}</p>
+            <button key='pokemon-type' className='type'>
+              {this.props.pokemon.type}
+            </button>
             <p key='pokemon-weight'>
               {this.props.pokemon.averageWeight.value}{' '}
               {this.props.pokemon.averageWeight.measurementUnit}
