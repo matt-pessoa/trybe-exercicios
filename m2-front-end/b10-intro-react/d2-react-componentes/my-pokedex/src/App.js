@@ -1,10 +1,16 @@
 import Pokedex from './Pokedex';
+import Footer from './Footer';
 
 function App() {
   return (
-    <main>
-      <Pokedex />
-    </main>
+    <div>
+      <main>
+        <Pokedex />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
 
