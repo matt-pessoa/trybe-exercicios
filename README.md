@@ -90,7 +90,7 @@ Olá, viajante! Neste repositório você encontrará todos os exercícios realiz
 
 - [x] 11-1: _'Hello, world!' no React!_
 - [x] 11-2: _Componentes React_
-- [ ] 11-3: _[Projeto - Movie Cards Library]()_
+- [x] 11-3: _[Projeto - Movie Cards Library]()_
 
 ##### Bloco 12: React
 
