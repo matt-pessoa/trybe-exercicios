@@ -1,21 +1,25 @@
 import React from 'react';
 import './App.css';
 
-function handleClick() {
-  return console.log('Clicked');
+function handleFirstButton() {
+  return console.log('First button');
+}
+
+function handleSecondButton() {
+  return console.log('Second button');
+}
+
+function handleThirdButton() {
+  return console.log('Third button');
 }
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      message: 'Clicked!',
-    };
-  }
   render() {
     return (
       <div className='App'>
-        <button onClick={handleClick}>Click me!</button>
+        <button onClick={handleFirstButton}>First button</button>
+        <button onClick={handleSecondButton}>Second button</button>
+        <button onClick={handleThirdButton}>Third button</button>
       </div>
     );
   }
