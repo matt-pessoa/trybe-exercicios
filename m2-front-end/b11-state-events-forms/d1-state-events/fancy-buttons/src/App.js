@@ -4,30 +4,48 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
-    // A função abaixo vincula "manualmente" o `this` à nossa função handleSecondButton
-    this.handleSecondButton = this.handleSecondButton.bind(this);
+    this.state = {
+      count: 0,
+    };
+
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleSub = this.handleSub.bind(this);
+    this.handleDouble = this.handleDouble.bind(this);
+    this.handleHalve = this.handleHalve.bind(this);
   }
 
-  handleFirstButton() {
-    return console.log(this); // this não existe aqui
+  handleAdd() {
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
   }
 
-  handleSecondButton() {
-    /* Agora esse log retorna o objeto `this`, já acessível para nossa função!
-    Com isso, podemos acessar as `props`, estado do componente e tudo o mais daqui de dentro */
-    return console.log(this);
+  handleSub() {
+    this.setState((prevState) => ({
+      count: prevState.count - 1,
+    }));
   }
 
-  handleThirdButton = () => {
-    /* Arrow functions não necessitam do bind, no entanto são menos performáticas */
-    return console.log(this);
-  };
+  handleDouble() {
+    this.setState((prevState) => ({
+      count: prevState.count * 2,
+    }));
+  }
+
+  handleHalve() {
+    this.setState((prevState) => ({
+      count: prevState.count / 2,
+    }));
+  }
+
   render() {
     return (
       <div className='App'>
-        <button onClick={this.handleFirstButton}>No bind</button>
-        <button onClick={this.handleSecondButton}>Bind</button>
-        <button onClick={this.handleThirdButton}>Arrow function</button>
+        <h1>{this.state.count}</h1>
+        <button onClick={this.handleAdd}>Add</button>
+        <button onClick={this.handleSub}>Subtract</button>
+        <button onClick={this.handleDouble}>Double</button>
+        <button onClick={this.handleHalve}>Halve</button>
       </div>
     );
   }
