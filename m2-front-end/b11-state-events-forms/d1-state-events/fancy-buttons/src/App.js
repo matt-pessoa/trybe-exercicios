@@ -5,7 +5,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      count: 0,
+      count: Math.floor(Math.random() * 101),
     };
 
     this.handleAdd = this.handleAdd.bind(this);
