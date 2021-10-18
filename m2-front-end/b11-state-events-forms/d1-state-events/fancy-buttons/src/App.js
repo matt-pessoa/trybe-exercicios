@@ -4,7 +4,7 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
-    // A função abaixo vincula "manualmente" o `this` à nossa função
+    // A função abaixo vincula "manualmente" o `this` à nossa função handleSecondButton
     this.handleSecondButton = this.handleSecondButton.bind(this);
   }
 
@@ -19,14 +19,15 @@ class App extends React.Component {
   }
 
   handleThirdButton = () => {
+    /* Arrow functions não necessitam do bind, no entanto são menos performáticas */
     return console.log(this);
   };
   render() {
     return (
       <div className='App'>
-        <button onClick={this.handleFirstButton}>First button</button>
-        <button onClick={this.handleSecondButton}>Second button</button>
-        <button onClick={this.handleThirdButton}>Third button</button>
+        <button onClick={this.handleFirstButton}>No bind</button>
+        <button onClick={this.handleSecondButton}>Bind</button>
+        <button onClick={this.handleThirdButton}>Arrow function</button>
       </div>
     );
   }
