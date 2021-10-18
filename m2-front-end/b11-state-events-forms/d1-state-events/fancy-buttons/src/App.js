@@ -4,6 +4,7 @@ import './App.css';
 class App extends React.Component {
   constructor() {
     super();
+    // A função abaixo vincula "manualmente" o `this` à nossa função
     this.handleSecondButton = this.handleSecondButton.bind(this);
   }
 
@@ -12,12 +13,14 @@ class App extends React.Component {
   }
 
   handleSecondButton() {
-    return console.log(this); // é possível chamar o this neste caso, pois ele está ligado pelo constructor
+    /* Agora esse log retorna o objeto `this`, já acessível para nossa função!
+    Com isso, podemos acessar as `props`, estado do componente e tudo o mais daqui de dentro */
+    return console.log(this);
   }
 
-  handleThirdButton() {
-    return console.log('Third button');
-  }
+  handleThirdButton = () => {
+    return console.log(this);
+  };
   render() {
     return (
       <div className='App'>
