@@ -41,7 +41,15 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h1>{this.state.count}</h1>
+        <h1
+          style={
+            this.state.count % 2 === 0
+              ? { backgroundColor: 'green' }
+              : { backgroundColor: 'red' }
+          }
+        >
+          {this.state.count}
+        </h1>
         <button onClick={this.handleAdd}>Add</button>
         <button onClick={this.handleSub}>Subtract</button>
         <button onClick={this.handleDouble}>Double</button>
