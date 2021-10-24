@@ -94,6 +94,6 @@ Olá, viajante! Neste repositório você encontrará todos os exercícios realiz
 - [x] 11-3: _[Projeto - Tryunfo](https://github.com/tryber/sd-015-b-project-tryunfo/pull/36)_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
-- [ ] 12-1: _Ciclo de vida de componentes_
+- [x] 12-1: _[Ciclo de vida de componentes]()_
 - [ ] 12-2: _React Router_
 - [ ] 12-3: _[Projeto - TrybeTunes]_()
