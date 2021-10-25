@@ -4,3 +4,6 @@
 [submodule "m2-front-end/b11-state-events-forms/d1-state-events/exercise-pokedex-state"]
 	path = m2-front-end/b11-state-events-forms/d1-state-events/exercise-pokedex-state
 	url = git@github.com:matt-pessoa/exercise-pokedex-state.git
+[submodule "m2-front-end/b12-lifecycle-router/d2-react-router/comprehension-exercises-router"]
+	path = m2-front-end/b12-lifecycle-router/d2-react-router/comprehension-exercises-router
+	url = git@github.com:matt-pessoa/comprehension-exercises-router.git
