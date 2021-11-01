@@ -5,9 +5,11 @@ class Pokemon extends React.Component {
   render() {
     return (
       <div className={`card ${this.props.pokemon.type}`}>
+        
         <h2 key='pokemon-name' class='name'>
           {this.props.pokemon.name}
         </h2>
+
         <div className='info'>
           <div className='stats'>
             <button key='pokemon-type' className='type'>
