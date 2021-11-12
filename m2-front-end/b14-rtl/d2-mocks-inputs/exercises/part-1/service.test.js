@@ -1,4 +1,4 @@
-const { expect, it, describe } = require("@jest/globals");
+const { expect, it, describe, afterEach } = require("@jest/globals");
 const service = require("./service");
 
 describe("Testes para a função generateRandomNumber", () => {
@@ -73,5 +73,28 @@ describe("Testes para as funções do Exercício 4", () => {
 	it("Verifica se o comportamento original da função strToUpperCase foi restaurado", () => {
 		service.strToUpperCase.mockRestore();
 		expect(service.strToUpperCase("string")).toBe("STRING");
+	});
+});
+
+describe("Testes para a função fetchDog", () => {
+	service.fetchDog = jest.fn();
+	afterEach(service.fetchDog.mockReset);
+
+	it("testando requisição caso a promisse resolva", async () => {
+		service.fetchDog.mockResolvedValue("request sucess");
+
+		service.fetchDog();
+		expect(service.fetchDog).toHaveBeenCalled();
+		expect(service.fetchDog).toHaveBeenCalledTimes(1);
+		await expect(service.fetchDog()).resolves.toBe("request sucess");
+		expect(service.fetchDog).toHaveBeenCalledTimes(2);
+	});
+
+	it("testando requisição caso a promisse seja rejeitada", async () => {
+		service.fetchDog.mockRejectedValue("request failed");
+
+		expect(service.fetchDog).toHaveBeenCalledTimes(0);
+		await expect(service.fetchDog()).rejects.toMatch("request failed");
+		expect(service.fetchDog).toHaveBeenCalledTimes(1);
 	});
 });

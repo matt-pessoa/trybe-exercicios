@@ -22,9 +22,18 @@ function concatenateStrings(str1, str2) {
 	return concatenatedStrings;
 }
 
+async function fetchDog() {
+	const URL = "https://dog.ceo/api/breeds/image/random";
+	const response = await fetch(URL);
+	const data = await response.json();
+
+	return data;
+}
+
 module.exports = {
 	generateRandomNumber,
 	strToUpperCase,
 	getFirstLetter,
 	concatenateStrings,
+	fetchDog,
 };
