@@ -44,3 +44,34 @@ describe("Testes para a função generateRandomNumber", () => {
 		expect(service.generateRandomNumber).toHaveBeenCalledTimes(1);
 	});
 });
+
+describe("Testes para as funções do Exercício 4", () => {
+	it("Testa a implementação de toLowerCase na função UpperCase", () => {
+		service.strToUpperCase = jest
+			.spyOn(service, "strToUpperCase")
+			.mockImplementation((str) => str.toLowerCase());
+		expect(service.strToUpperCase("STRING")).toBe("string");
+	});
+
+	it("Testa a implementação de retornar a ultima letra para getFirstLetter", () => {
+		service.getFirstLetter = jest
+			.spyOn(service, "getFirstLetter")
+			.mockImplementation((str) => str[str.length - 1]);
+		expect(service.getFirstLetter("string")).toBe("g");
+		expect(service.getFirstLetter("string")).not.toBe("s");
+	});
+
+	it("Testa a implementação de aumentar o numero de parametros de concatenateStrings", () => {
+		service.concatenateStrings = jest
+			.spyOn(service, "concatenateStrings")
+			.mockImplementation((str1, str2, str3) => {
+				return `${str1}${str2}${str3}`;
+			});
+		expect(service.concatenateStrings("s", "t", "r")).toBe("str");
+	});
+
+	it("Verifica se o comportamento original da função strToUpperCase foi restaurado", () => {
+		service.strToUpperCase.mockRestore();
+		expect(service.strToUpperCase("string")).toBe("STRING");
+	});
+});
