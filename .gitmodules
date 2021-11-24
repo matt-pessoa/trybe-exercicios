@@ -7,3 +7,12 @@
 [submodule "m2-front-end/b12-lifecycle-router/d2-react-router/comprehension-exercises-router"]
 	path = m2-front-end/b12-lifecycle-router/d2-react-router/comprehension-exercises-router
 	url = git@github.com:matt-pessoa/comprehension-exercises-router.git
+[submodule "m2-front-end/b14-rtl/d1-intro/exercise-todo-list"]
+	path = m2-front-end/b14-rtl/d1-intro/exercise-todo-list
+	url = git@github.com:matt-pessoa/exercise-todo-list.git
+[submodule "m2-front-end/b14-rtl/d1-intro/exercise-tic-tac-toe"]
+	path = m2-front-end/b14-rtl/d1-intro/exercise-tic-tac-toe
+	url = git@github.com:matt-pessoa/exercise-tic-tac-toe.git
+[submodule "m2-front-end/b14-rtl/d2-mocks-inputs/exercises/part-2/exercise-digimon-finders"]
+	path = m2-front-end/b14-rtl/d2-mocks-inputs/exercises/part-2/exercise-digimon-finders
+	url = git@github.com:matt-pessoa/exercise-digimon-finders.git
