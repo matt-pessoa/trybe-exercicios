@@ -16,3 +16,6 @@
 [submodule "m2-front-end/b14-rtl/d2-mocks-inputs/exercises/part-2/exercise-digimon-finders"]
 	path = m2-front-end/b14-rtl/d2-mocks-inputs/exercises/part-2/exercise-digimon-finders
 	url = git@github.com:matt-pessoa/exercise-digimon-finders.git
+[submodule "m2-front-end/b17-context/d1-context/exercise-contextAPI-refactoring"]
+	path = m2-front-end/b17-context/d1-context/exercise-contextAPI-refactoring
+	url = git@github.com:tryber/exercise-contextAPI-refactoring.git
