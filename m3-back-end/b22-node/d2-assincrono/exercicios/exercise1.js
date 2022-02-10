@@ -19,6 +19,4 @@ function numbersPromise(num1, num2, num3) {
 	return promise;
 }
 
-numbersPromise(1, 2, 3)
-	.then((result) => console.log(result))
-	.catch((err) => console.error(err.message));
+module.exports = numbersPromise;
