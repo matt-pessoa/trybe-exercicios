@@ -7,7 +7,7 @@ async function appendToFile() {
 
 	file.push({ id: "8", name: "Nelson Muntz" });
 
-	fs.writeFile("./simpsonFamily.json", JSON.stringify(file));
+	await fs.writeFile("./simpsonFamily.json", JSON.stringify(file));
 }
 
 appendToFile();
