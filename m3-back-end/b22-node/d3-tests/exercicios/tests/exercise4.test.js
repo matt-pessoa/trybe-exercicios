@@ -1,7 +1,6 @@
 const { expect } = require("chai");
 const sinon = require("sinon");
 const fs = require("fs");
-
 const escreveArquivo = require("../escreveArquivo");
 
 const CONTEUDO_ARQUIVO = "TDD é vida";
