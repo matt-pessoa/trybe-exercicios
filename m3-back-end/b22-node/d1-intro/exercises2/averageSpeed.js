@@ -9,4 +9,4 @@ const mainSpeed = () => {
   console.log(avgSpeed);
 };
 
-mainSpeed();
+module.exports = mainSpeed;

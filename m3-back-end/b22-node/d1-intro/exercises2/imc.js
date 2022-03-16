@@ -10,4 +10,4 @@ const mainImc = () => {
   console.log(situation);
 };
 
-mainImc();
+module.exports = mainImc;
