@@ -1,6 +1,8 @@
+const readline = require('readline-sync');
+
 const averageSpeed = () => {
-  const time = 100;
-  const distance = 200;
+  const time = readline.questionInt('Tempo (em segundos): ');
+  const distance = readline.questionInt('Distância (em metros): ');
 
   const averageSpeedCalc = distance / time;
 
