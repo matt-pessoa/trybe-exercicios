@@ -2,7 +2,7 @@ const imcCalc = require('./services/imcCalc');
 const imcDataEntry = require('./controllers/imcDataEntry');
 const imcSituation = require('./services/imcSituation');
 
-const main = () => {
+const mainImc = () => {
   const { weight, height } = imcDataEntry();
   const imc = imcCalc(weight, height);
   const situation = imcSituation(imc);
@@ -10,4 +10,4 @@ const main = () => {
   console.log(situation);
 };
 
-main();
+mainImc();
