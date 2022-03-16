@@ -4,6 +4,7 @@
   "description": "exercicios do primeiro dia de node",
   "main": "index.js",
   "scripts": {
+    "speed": "node averageSpeed.js",
     "imc": "node imc.js",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
