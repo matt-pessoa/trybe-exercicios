@@ -1,6 +1,7 @@
 const mainImc = require('../imc');
 const mainSpeed = require('../averageSpeed');
 const mainLottery = require('../lottery');
+const mainFactorial = require('../factorial');
 
 const indexChoices = (scriptChoice) => {
   if (scriptChoice === 0) {
@@ -9,6 +10,8 @@ const indexChoices = (scriptChoice) => {
     mainSpeed();
   } else if (scriptChoice === 2) {
     mainLottery();
+  } else if (scriptChoice === 3) {
+    mainFactorial();
   } else {
     console.log('Opção inválida');
   }

@@ -4,6 +4,7 @@
   "description": "exercicios do primeiro dia de node",
   "main": "index.js",
   "scripts": {
+    "fibonacci": "node fibonacci.js",
     "factorial": "node factorial.js",
     "lottery": "node lottery.js",
     "speed": "node averageSpeed.js",

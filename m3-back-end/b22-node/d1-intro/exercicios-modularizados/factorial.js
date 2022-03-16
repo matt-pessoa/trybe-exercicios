@@ -5,7 +5,7 @@ const factorial = () => {
   const input = factorialDataEntry();
   const output = factorialCalc(input);
 
-  return console.log(output);
+  return console.log(`O fatorial de ${input} é ${output}`);
 };
 
-factorial();
+module.exports = factorial;
