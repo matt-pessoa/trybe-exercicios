@@ -1,12 +1,12 @@
 const readline = require('readline-sync');
 
 const imc = () => {
-  const weight = 100;
-  const height = 1.92;
+  const weight = readline.questionFloat('Qual o seu peso? ');
+  const height = readline.questionFloat('Qual a sua altura? ');
 
   const imcCalc = weight / height ** 2;
 
-  console.log(imcCalc);
+  console.log(imcCalc.toFixed(2));
 };
 
 imc();
