@@ -4,24 +4,24 @@ const verifyNumber = require("../verifyNumber");
 
 describe("Verifica o parâmetro passado", () => {
 	it("espera que o retorno seja uma string", () => {
-		expect.fail("TBI");
+		expect(verifyNumber(2)).to.be.a("string");
 	});
 
 	describe("Quando o parâmetro é maior que zero", () => {
 		it("espera que o retorno seja 'positivo'", () => {
-			expect.fail("TBI");
+			expect(verifyNumber(-2)).to.be.equals("negativo");
 		});
 	});
 
 	describe("Quando o parâmetro é igual a zero", () => {
 		it("espera que o retorno seja 'neutro'", () => {
-			expect.fail("TBI");
+			expect(verifyNumber(0)).to.be.equals("neutro");
 		});
 	});
 
 	describe("Quando o parâmetro é menor que zero", () => {
 		it("espera que o retorno seja 'negativo'", () => {
-			expect.fail("TBI");
+			expect(verifyNumber(5)).to.be.equals("positivo");
 		});
 	});
 });
