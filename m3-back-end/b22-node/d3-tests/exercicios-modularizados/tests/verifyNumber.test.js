@@ -7,6 +7,10 @@ describe("Verifica o parâmetro passado", () => {
 		expect(verifyNumber(2)).to.be.a("string");
 	});
 
+	it("espera que o parâmetro seja do tipo number", () => {
+		expect(verifyNumber("2")).to.be.equals("o valor deve ser um número");
+	});
+
 	describe("Quando o parâmetro é maior que zero", () => {
 		it("espera que o retorno seja 'positivo'", () => {
 			expect(verifyNumber(-2)).to.be.equals("negativo");
