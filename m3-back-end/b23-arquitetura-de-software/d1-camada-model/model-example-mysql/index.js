@@ -11,9 +11,9 @@ app.get("/books", async (req, res) => {
 	return res.status(200).json(books);
 });
 
-app.get("/books/:id", async (req, res) => {
-	const { id } = req.params;
-	const books = await Books.getAuthorById(id);
+app.get("/books/search", async (req, res) => {
+	const { authorId } = req.query;
+	const books = await Books.getAuthorById(authorId);
 
 	return res.status(200).json(books);
 });
