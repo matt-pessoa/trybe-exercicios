@@ -11,7 +11,6 @@ const createNewUser = (firstName, lastName, email, password) => {
 		first_name: firstName,
 		last_name: lastName,
 		email,
-		password,
 	};
 };
 
