@@ -1,4 +1,4 @@
-const createNewUserValidation = (req) => {
+const userValidation = (req) => {
 	const { firstName, lastName, email, password } = req.body;
 
 	if (!firstName || !lastName || !email || !password) {
@@ -11,5 +11,5 @@ const createNewUserValidation = (req) => {
 };
 
 module.exports = {
-	createNewUserValidation,
+	userValidation,
 };

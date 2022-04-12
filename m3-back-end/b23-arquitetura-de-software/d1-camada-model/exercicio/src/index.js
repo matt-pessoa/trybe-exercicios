@@ -1,6 +1,6 @@
 const express = require("express");
 const { createNewUser, getUser } = require("./model/User");
-const { createNewUserValidation } = require("./model/Validation");
+const { userValidation } = require("./model/Validation");
 const { getAllUsers } = require("./model/User");
 const { updateUser } = require("./model/User");
 
@@ -12,7 +12,7 @@ app.listen(PORT, () => console.log(`Running on http://localhost:${PORT}`));
 
 app.post("/user", async (req, res) => {
 	try {
-		if (!createNewUserValidation(req)) {
+		if (!userValidation(req)) {
 			return res.status(400).json({
 				error: true,
 				message: "O campo 'password' deve ter pelo menos 6 caracteres",
@@ -61,17 +61,24 @@ app.get("/user/:id", async (req, res) => {
 
 app.put("/user/:id", async (req, res) => {
 	try {
-		const { id } = req.params;
-		const { firstName, lastName, email, password } = req.body;
-		await updateUser(id, firstName, lastName, email, password);
+		if (!userValidation(req)) {
+			return res.status(400).json({
+				error: true,
+				message: "O campo 'password' deve ter pelo menos 6 caracteres",
+			});
+		} else {
+			const { id } = req.params;
+			const { firstName, lastName, email, password } = req.body;
+			await updateUser(id, firstName, lastName, email, password);
 
-		return res.status(200).json({
-			id,
-			firstName,
-			lastName,
-			email,
-			password,
-		});
+			return res.status(200).json({
+				id,
+				firstName,
+				lastName,
+				email,
+				password,
+			});
+		}
 	} catch (error) {
 		console.log(error);
 		return res.status(500).end();
