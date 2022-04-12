@@ -27,6 +27,8 @@ const getUser = async (id) => {
 		id,
 	]);
 
+	if (user.length === 0) return false;
+
 	return user;
 };
 
