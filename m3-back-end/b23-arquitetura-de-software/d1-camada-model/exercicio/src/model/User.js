@@ -47,9 +47,22 @@ const updateUser = async (id, firstName, lastName, email, password) => {
 	return true;
 };
 
+const deleteUser = async (id) => {
+	const [userId] = await connection.execute(
+		`SELECT * FROM users WHERE id = ?`,
+		[id]
+	);
+	await connection.execute(`DELETE FROM users WHERE id = ?`, [id]);
+
+	if (userId.length === 0) return false;
+
+	return true;
+};
+
 module.exports = {
 	createNewUser,
 	getAllUsers,
 	getUser,
 	updateUser,
+	deleteUser,
 };
