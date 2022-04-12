@@ -1,7 +1,7 @@
 const connection = require("../connection");
 
-const createNewUser = (firstName, lastName, email, password) => {
-	const { insertedId } = connection.execute(
+const createNewUser = async (firstName, lastName, email, password) => {
+	const { insertedId } = await connection.execute(
 		`INSERT INTO users (first_name, last_name, email, password) VALUES (?,?,?,?)`,
 		[firstName, lastName, email, password]
 	);
@@ -14,6 +14,12 @@ const createNewUser = (firstName, lastName, email, password) => {
 	};
 };
 
+const getAllUsers = async () => {
+	const [query] = await connection.execute(`SELECT * FROM users`);
+	return query;
+};
+
 module.exports = {
 	createNewUser,
+	getAllUsers,
 };

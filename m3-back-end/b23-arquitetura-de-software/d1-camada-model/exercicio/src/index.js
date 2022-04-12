@@ -1,6 +1,7 @@
 const express = require("express");
 const { createNewUser } = require("./model/User");
 const { createNewUserValidation } = require("./model/Validation");
+const { getAllUsers } = require("./model/User");
 
 const app = express();
 const PORT = 3000;
@@ -25,5 +26,16 @@ app.post("/user", async (req, res) => {
 	} catch (error) {
 		console.log(error);
 		return res.status(500).end();
+	}
+});
+
+app.get("/user", async (_req, res) => {
+	try {
+		const query = await getAllUsers();
+
+		return res.status(200).json(query);
+	} catch (error) {
+		console.log(error);
+		res.status(500).end();
 	}
 });
