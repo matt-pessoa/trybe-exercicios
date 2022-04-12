@@ -69,7 +69,19 @@ app.put("/user/:id", async (req, res) => {
 		} else {
 			const { id } = req.params;
 			const { firstName, lastName, email, password } = req.body;
-			await updateUser(id, firstName, lastName, email, password);
+			const isUserUpdated = await updateUser(
+				id,
+				firstName,
+				lastName,
+				email,
+				password
+			);
+
+			if (!isUserUpdated)
+				return res.status(404).json({
+					error: true,
+					message: "Usuário não encontrado",
+				});
 
 			return res.status(200).json({
 				id,

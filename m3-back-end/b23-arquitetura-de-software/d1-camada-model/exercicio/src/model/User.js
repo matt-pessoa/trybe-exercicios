@@ -33,10 +33,16 @@ const getUser = async (id) => {
 };
 
 const updateUser = async (id, firstName, lastName, email, password) => {
+	const [userId] = await connection.execute(
+		`SELECT * FROM users WHERE id = ?`,
+		[id]
+	);
 	await connection.execute(
 		`UPDATE users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?`,
 		[firstName, lastName, email, password, id]
 	);
+
+	if (userId.length === 0) return false;
 
 	return true;
 };
