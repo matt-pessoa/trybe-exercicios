@@ -2,6 +2,7 @@ const express = require("express");
 const { createNewUser, getUser } = require("./model/User");
 const { createNewUserValidation } = require("./model/Validation");
 const { getAllUsers } = require("./model/User");
+const { updateUser } = require("./model/User");
 
 const app = express();
 const PORT = 3000;
@@ -52,6 +53,25 @@ app.get("/user/:id", async (req, res) => {
 			});
 
 		return res.status(200).json(user);
+	} catch (error) {
+		console.log(error);
+		return res.status(500).end();
+	}
+});
+
+app.put("/user/:id", async (req, res) => {
+	try {
+		const { id } = req.params;
+		const { firstName, lastName, email, password } = req.body;
+		await updateUser(id, firstName, lastName, email, password);
+
+		return res.status(200).json({
+			id,
+			firstName,
+			lastName,
+			email,
+			password,
+		});
 	} catch (error) {
 		console.log(error);
 		return res.status(500).end();

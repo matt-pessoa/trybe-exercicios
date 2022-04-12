@@ -32,8 +32,18 @@ const getUser = async (id) => {
 	return user;
 };
 
+const updateUser = async (id, firstName, lastName, email, password) => {
+	await connection.execute(
+		`UPDATE users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?`,
+		[firstName, lastName, email, password, id]
+	);
+
+	return true;
+};
+
 module.exports = {
 	createNewUser,
 	getAllUsers,
 	getUser,
+	updateUser,
 };
