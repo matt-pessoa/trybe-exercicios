@@ -16,6 +16,9 @@ const createNewUser = async (firstName, lastName, email, password) => {
 
 const getAllUsers = async () => {
 	const [query] = await connection.execute(`SELECT * FROM users`);
+
+	if (Object.keys(query) === 0) return [];
+
 	return query;
 };
 
